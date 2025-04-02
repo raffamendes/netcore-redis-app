@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "QThzHTNFvFs=",
+  "success": true,
+  "projectFilePath": "/home/rmendes/dotnet-workspace/ExpensesApi/ExpensesApi.csproj",
+  "expectedPackageFiles": [
+    "/home/rmendes/.nuget/packages/microsoft.aspnetcore.openapi/9.0.2/microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
+    "/home/rmendes/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "/home/rmendes/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512",
+    "/home/rmendes/.nuget/packages/nettopologysuite/2.5.0/nettopologysuite.2.5.0.nupkg.sha512",
+    "/home/rmendes/.nuget/packages/nredisstack/0.13.2/nredisstack.0.13.2.nupkg.sha512",
+    "/home/rmendes/.nuget/packages/pipelines.sockets.unofficial/2.2.8/pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "/home/rmendes/.nuget/packages/stackexchange.redis/2.8.16/stackexchange.redis.2.8.16.nupkg.sha512",
+    "/home/rmendes/.nuget/packages/system.io.pipelines/5.0.1/system.io.pipelines.5.0.1.nupkg.sha512",
+    "/home/rmendes/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}
