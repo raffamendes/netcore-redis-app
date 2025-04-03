@@ -35,3 +35,4 @@
 /home/rmendes/dotnet-workspace/ExpensesApi/bin/Debug/net9.0/NRedisStack.dll
 /home/rmendes/dotnet-workspace/ExpensesApi/bin/Debug/net9.0/Pipelines.Sockets.Unofficial.dll
 /home/rmendes/dotnet-workspace/ExpensesApi/bin/Debug/net9.0/StackExchange.Redis.dll
+/home/rmendes/dotnet-workspace/ExpensesApi/obj/Debug/net9.0/ExpensesApi.sourcelink.json

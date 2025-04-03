@@ -16,6 +16,8 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(provider => {
     return ConnectionMultiplexer.Connect(redisConnection);
 });
 
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
 
 
@@ -29,5 +31,7 @@ if (app.Environment.IsDevelopment())
 //app.UseHttpsRedirection();
 
 app.MapControllers();
+
+app.MapHealthChecks("/healthz");
 
 app.Run();
