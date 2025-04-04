@@ -13,6 +13,11 @@ builder.Services.AddControllers();
 builder.Services.AddSingleton<IConnectionMultiplexer>(provider => {
     //string? redisConnection = builder.Configuration.GetConnectionString("RedisHost");
     string? redisConnection = Environment.GetEnvironmentVariable("REDIS_HOST");
+    string? redisPassword = Environment.GetEnvironmentVariable("REDIS_PASS");
+    string? redisUser = Environment.GetEnvironmentVariable("REDIS_USER");
+    ConfigurationOptions configOptions = ConfigurationOptions.Parse(redisConnection);
+    configOptions.User = redisUser;
+    configOptions.Password = redisPassword;
     return ConnectionMultiplexer.Connect(redisConnection);
 });
 
