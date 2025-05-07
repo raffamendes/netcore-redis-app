@@ -1,5 +1,6 @@
 using StackExchange.Redis;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -22,7 +23,7 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(provider => {
     configOptions.User = redisUser;
     configOptions.Password = redisPassword;
     configOptions.AbortOnConnectFail = false;
-    return ConnectionMultiplexer.Connect(redisConnection);
+    return ConnectionMultiplexer.Connect(configOptions);
 });
 
 builder.Services.AddHealthChecks();
