@@ -15,9 +15,13 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(provider => {
     string? redisConnection = Environment.GetEnvironmentVariable("REDIS_HOST");
     string? redisPassword = Environment.GetEnvironmentVariable("REDIS_PASS");
     string? redisUser = Environment.GetEnvironmentVariable("REDIS_USER");
-    ConfigurationOptions configOptions = ConfigurationOptions.Parse(redisConnection);
+    Console.WriteLine(redisConnection);
+    Console.WriteLine(redisPassword);
+    Console.WriteLine(redisUser);
+    ConfigurationOptions configOptions = ConfigurationOptions.Parse(redisConnection).Apply(c=>c.CertificateValidation+=(_, _, _, _) => true);
     configOptions.User = redisUser;
     configOptions.Password = redisPassword;
+    configOptions.AbortOnConnectFail = false;
     return ConnectionMultiplexer.Connect(redisConnection);
 });
 
